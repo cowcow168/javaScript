@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title></title>
+
+  <style type="text/css">
+    .text {
+      border: 1px solid #ddd;
+      outline: none;
+      color: #999;
+      font-size: 15px;
+      padding: 5px;
+      width: 300px;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('input').focus(function () {
+        if(this.value == 'お名前を入力してください') {
+          $(this).val('').css('border', '1px solid #1abc9c');
+        } else {
+          $(this).val(this.value).css('border', '1px solid #1abc9c');
+        }
+      });
+
+      $('input').blur(function () {
+        if(this.value == '') {
+          $(this).val('お名前を入力してください').css('border', '1px solid #ddd');
+        }
+        if(this.value !== '') {
+          $(this).css('border', '1px solid #ddd');
+        }
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <input type="text" class="text" value="お名前を入力してください">
+</body>
+
+</html>

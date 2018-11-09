@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title></title>
+
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    
+    #msgbox {
+      background: #fff3f3;
+      border: 1px solid #ffacac;
+      padding: 10px;
+      margin: 30px auto;
+      position: relative;
+      width: 80%;
+      text-align: center;
+    }
+    
+    .delete {
+      background: #424242;
+      border-radius: 30px;
+      color: #fff;
+      cursor: pointer;
+      position: absolute;
+      line-height: 34px;
+      right: -14px;
+      top: -30px;
+      text-align: center;
+      width: 34px;
+      height: 34px;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('.delete').click(function(){
+        $('#msgbox').animate({opacity: 0}, 300);
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="msgbox">
+    <p>Windows 10にアップグレードしますか？</p>
+    <p class="delete">✕</p>
+  </div>
+</body>
+
+</html>

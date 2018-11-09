@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title></title>
+
+  <style type="text/css">
+    .error {
+      color: #f00;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('#btn').click(function() {
+        if($('#name').val() == '') {
+          $('#name_error').text('お名前を入力してください。');
+        } else {
+          $('#name_error').text('');
+        };
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  お名前
+  <input type="text" id="name" placeholder="（例）山田 太郎">
+  <input type="button" id="btn" value="送信する">
+  <p class="error" id="name_error"></p>
+</body>
+
+</html>

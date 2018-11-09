@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title></title>
+
+  <style type="text/css">
+    p {
+      border: 1px solid #dedede;
+      padding: 10px;
+      width: 400px;
+    }
+    
+    .change {
+      background: #ffebeb;
+      border: 1px solid #ff6767;
+      color: #ff6767;
+    }
+    
+    #pushme {
+      background: #f1f1f1;
+      border: 1px solid #dedede;
+      cursor: pointer;
+      padding: 5px 10px;
+      display: inline-block;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('#pushme').click(function () {
+        $('p').addClass('change');
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+  <div id="pushme">押してね</div>
+</body>
+
+</html>

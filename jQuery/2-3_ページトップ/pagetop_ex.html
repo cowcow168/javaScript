@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title></title>
+
+  <style type="text/css">
+    #content {
+      height: 5000px;
+    }
+    
+    #gotoTop {
+      cursor: pointer;
+      position: fixed;
+      right: 5%;
+      bottom: -94px;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('#gotoTop').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 300);
+      });
+      $('#gotoTop').mouseover(function(){
+        $(this).animate({
+          bottom: '0px'
+        }, 300);
+      });
+      $('#gotoTop').mouseout(function(){
+        $(this).animate({
+          bottom: '-94px'
+        }, 300);
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="content">
+    <p>ここがページトップ</p>
+    <a href="#" id="gotoTop"><img src="ufo.png" alt="ページトップ">
+    </a>
+  </div>
+
+</body>
+
+</html>

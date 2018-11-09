@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title></title>
+
+  <style type="text/css">
+    #gotoTop {
+      background: #3a83ec;
+      border-radius: 100px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 30px;
+      display: inline-block;
+      line-height: 80px;
+      margin-top: 3000px;
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      text-decoration: none;
+    }
+    #gotoTop:hover {
+      background: #5395f5;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('#gotoTop').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 300);
+        return false;
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <p>ここがページトップ</p>
+  <a href="#" id="gotoTop">↑</a>
+
+</body>
+
+</html>

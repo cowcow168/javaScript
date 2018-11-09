@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title></title>
+
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    
+    h3 {
+      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr '#87E255', endColorstr '#48B42D');
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#87E255', endColorstr = '#48B42D')";
+      background-image: -moz-linear-gradient(top, #87E255, #48B42D);
+      background-image: -ms-linear-gradient(top, #87E255, #48B42D);
+      background-image: -o-linear-gradient(top, #87E255, #48B42D);
+      background-image: -webkit-gradient(linear, center top, center bottom, from(#87E255), to(#48B42D));
+      background-image: -webkit-linear-gradient(top, #87E255, #48B42D);
+      background-image: linear-gradient(top, #87E255, #48B42D);
+      border: 1px solid #399e1e;
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      padding: 5px;
+    }
+    
+    #msgbox {
+      background: #efefef;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px #aaa;
+      color: #555;
+      opacity: 0;
+      margin: 100px auto;
+      padding: 0 0 20px;
+      position: relative;
+      width: 400px;
+      text-align: center;
+    }
+    
+    .number {
+      background: #308617;
+      border-radius: 30px;
+      color: #fff;
+      position: absolute;
+      line-height: 28px;
+      right: 10px;
+      top: -10px;
+      text-align: center;
+      width: 28px;
+      height: 28px;
+      box-shadow: 1px 1px 3px #164808 inset;
+    }
+    
+    .btngroup > div {
+      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr '#F2F3F4', endColorstr '#DCDEE1');
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#F2F3F4', endColorstr = '#DCDEE1')";
+      background-image: -moz-linear-gradient(top, #F2F3F4, #DCDEE1);
+      background-image: -ms-linear-gradient(top, #F2F3F4, #DCDEE1);
+      background-image: -o-linear-gradient(top, #F2F3F4, #DCDEE1);
+      background-image: -webkit-gradient(linear, center top, center bottom, from(#F2F3F4), to(#DCDEE1));
+      background-image: -webkit-linear-gradient(top, #F2F3F4, #DCDEE1);
+      background-image: linear-gradient(top, #F2F3F4, #DCDEE1);
+      border: 1px solid #CDCED1;
+      box-shadow: 0 1px 1px #aaa;
+      cursor: pointer;
+      display: inline-block;
+      border: 1px solid #dedede;
+      padding: 5px;
+      margin: 0 5px;
+      width: 120px;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(window).load(function () {
+      $('#msgbox').animate({
+        opacity: 1
+      }, 1000);
+      $('#close').click(function(){
+        $('#msgbox').hide();
+      })
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="msgbox">
+    <h3>メッセージ通知</h3>
+    <p>10分くらい遅れます！！</p>
+    <p class="number">8</p>
+    <div class="btngroup">
+      <div id="display">表示</div>
+      <div id="close">閉じる</div>
+    </div>
+  </div>
+</body>
+
+</html>

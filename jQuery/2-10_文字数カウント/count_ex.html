@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <title></title>
+
+  <style type="text/css">
+    #result2 {
+      color: red;
+      display: none;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('textarea').keyup(function () {
+        var counter = 10 - $(this).val().length;
+        
+        $('#countdown').text(counter);
+
+        if (counter == 0) {
+          $('#countdown').text('0');
+        }
+        if (counter < 0) {
+          $('#result').css('display', 'none');
+          $('#result2').css('display', 'block');
+        } else {
+          $('#result').css({'display': 'block', 'color': 'black'});
+          $("#result2").css('display', 'none');
+        }
+        
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <p>この映画の感想を10文字以内で入力してください。</p>
+  <textarea cols="30" rows="10"></textarea>
+  <p id="result">あと<span id="countdown">10</span>文字入力できます</p>
+  <p id="result2">文字数オーバー</p>
+</body>
+
+</html>
